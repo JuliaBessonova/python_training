@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 import pytest
 from contact import Contact
-from conapplication import Conapplication
+from application import Application
 
 @pytest.fixture
 def app(request):
-    fixture = Conapplication()
+    fixture = Application()
     request.addfinalizer(fixture.destroy)
     return fixture
 
