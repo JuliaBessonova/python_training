@@ -31,6 +31,7 @@ class ContactHelper:
 
     def change(self, contact):
         wd = self.app.wd
+        self.go_to_home_page()
         # open edit form
         wd.find_element_by_xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img").click()
         # fill edit form
@@ -55,6 +56,7 @@ class ContactHelper:
 
     def delete_first_contact(self):
         wd = self.app.wd
+        self.go_to_home_page()
         # select first contact
         wd.find_element_by_name("selected[]").click()
         # submit deletion
@@ -62,14 +64,16 @@ class ContactHelper:
         # approve deletion
         wd.switch_to_alert().accept()
         # go back to home page
-        self.back_to_home_page()
+        self.go_to_home_page()
 
     def return_to_home_page(self):
         wd = self.app.wd
         wd.find_element_by_link_text("home page").click()
 
-    def back_to_home_page(self):
+    def go_to_home_page(self):
         wd = self.app.wd
+        if wd.current_url.endswith("/addressbook/"):
+            return
         wd.find_element_by_link_text("home").click()
 
     def count(self):
