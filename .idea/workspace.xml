@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69df2c6d-bab7-4d7e-8a03-ef4a9cc7d70d" name="Default" comment="Добавлена запись рекордера">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/fixture/contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture/contact.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -83,8 +82,8 @@
       <file leaf-file-name="contact.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fixture/contact.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="239">
-              <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
+            <state relative-caret-position="216">
+              <caret line="74" column="137" selection-start-line="74" selection-start-column="137" selection-end-line="74" selection-end-column="137" />
             </state>
           </provider>
         </entry>
@@ -202,7 +201,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.py.test in test_modify_contact.py">
+  <component name="RunManager" selected="Python tests.py.test in test_del_contact.py">
     <configuration name="py.test in test_add_group.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="python_training" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -282,8 +281,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.py.test in test_modify_contact.py" />
         <item itemvalue="Python tests.py.test in test_del_contact.py" />
+        <item itemvalue="Python tests.py.test in test_modify_contact.py" />
         <item itemvalue="Python tests.py.test in test_del_group.py" />
         <item itemvalue="Python tests.py.test in test_modify_group.py" />
         <item itemvalue="Python tests.py.test in test_add_group.py" />
@@ -312,15 +311,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="py_test_in_test_del_contact_py - 2018.06.07 at 22h 41m 03s.xml">
-      <configuration name="py.test in test_del_contact.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="py_test_in_test_del_contact_py - 2018.06.07 at 22h 42m 31s.xml">
-      <configuration name="py.test in test_del_contact.py" configurationId="tests" />
-    </history-entry>
-    <history-entry file="py_test_in_test_del_contact_py - 2018.06.07 at 22h 42m 59s.xml">
-      <configuration name="py.test in test_del_contact.py" configurationId="tests" />
-    </history-entry>
     <history-entry file="py_test_in_test_modify_contact_py - 2018.06.07 at 22h 44m 02s.xml">
       <configuration name="py.test in test_modify_contact.py" configurationId="tests" />
     </history-entry>
@@ -342,17 +332,25 @@
     <history-entry file="py_test_in_test_del_contact_py - 2018.06.07 at 22h 47m 19s.xml">
       <configuration name="py.test in test_del_contact.py" configurationId="tests" />
     </history-entry>
+    <history-entry file="py_test_in_test_del_contact_py - 2018.06.10 at 22h 02m 17s.xml">
+      <configuration name="py.test in test_del_contact.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_test_del_contact_py - 2018.06.10 at 22h 04m 30s.xml">
+      <configuration name="py.test in test_del_contact.py" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_test_modify_contact_py - 2018.06.10 at 22h 05m 01s.xml">
+      <configuration name="py.test in test_modify_contact.py" configurationId="tests" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24304539" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.41269842" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.25873017" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Favorites" order="2" side_tool="true" />
@@ -657,8 +655,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fixture/contact.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="239">
-          <caret line="81" lean-forward="true" selection-start-line="81" selection-end-line="81" />
+        <state relative-caret-position="216">
+          <caret line="74" column="137" selection-start-line="74" selection-start-column="137" selection-end-line="74" selection-end-column="137" />
         </state>
       </provider>
     </entry>
