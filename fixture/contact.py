@@ -1,4 +1,4 @@
-
+from model.contact import Contact
 
 class ContactHelper:
 
@@ -10,46 +10,34 @@ class ContactHelper:
         # create new contact
         wd.find_element_by_link_text("add new").click()
         # fill contact form
-        wd.find_element_by_name("firstname").click()
-        wd.find_element_by_name("firstname").clear()
-        wd.find_element_by_name("firstname").send_keys(contact.firstname)
-        wd.find_element_by_name("lastname").click()
-        wd.find_element_by_name("lastname").clear()
-        wd.find_element_by_name("lastname").send_keys(contact.lastname)
-        wd.find_element_by_name("address").click()
-        wd.find_element_by_name("address").clear()
-        wd.find_element_by_name("address").send_keys(contact.address)
-        wd.find_element_by_name("home").click()
-        wd.find_element_by_name("home").clear()
-        wd.find_element_by_name("home").send_keys(contact.phone)
-        wd.find_element_by_name("email").click()
-        wd.find_element_by_name("email").clear()
-        wd.find_element_by_name("email").send_keys(contact.email)
+        self.fill_contact_form(contact)
         # submit contact creation
         wd.find_element_by_xpath("//div[@id='content']/form/input[21]").click()
         self.return_to_home_page()
 
-    def change(self, contact):
+    def fill_contact_form(self, contact):
+        wd = self.app.wd
+        self.change_field_value("firstname", contact.firstname)
+        self.change_field_value("lastname", contact.lastname)
+        self.change_field_value("address", contact.address)
+        self.change_field_value("home", contact.phone)
+        self.change_field_value("email", contact.email)
+
+
+    def change_field_value(self, field_name, text):
+        wd = self.app.wd
+        if text is not None:
+            wd.find_element_by_name(field_name).click()
+            wd.find_element_by_name(field_name).clear()
+            wd.find_element_by_name(field_name).send_keys(text)
+
+    def change_first_contact(self, new_contact_data):
         wd = self.app.wd
         self.go_to_home_page()
         # open edit form
         wd.find_element_by_xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img").click()
-        # fill edit form
-        wd.find_element_by_name("firstname").click()
-        wd.find_element_by_name("firstname").clear()
-        wd.find_element_by_name("firstname").send_keys(contact.firstname)
-        wd.find_element_by_name("lastname").click()
-        wd.find_element_by_name("lastname").clear()
-        wd.find_element_by_name("lastname").send_keys(contact.lastname)
-        wd.find_element_by_name("address").click()
-        wd.find_element_by_name("address").clear()
-        wd.find_element_by_name("address").send_keys(contact.address)
-        wd.find_element_by_name("home").click()
-        wd.find_element_by_name("home").clear()
-        wd.find_element_by_name("home").send_keys(contact.phone)
-        wd.find_element_by_name("email").click()
-        wd.find_element_by_name("email").clear()
-        wd.find_element_by_name("email").send_keys(contact.email)
+        # fill contact form
+        self.fill_contact_form(new_contact_data)
         # submit modification
         wd.find_element_by_name("update").click()
         self.return_to_home_page()
@@ -79,3 +67,16 @@ class ContactHelper:
     def count(self):
         wd = self.app.wd
         return len(wd.find_elements_by_name("selected[]"))
+
+    def get_contact_list(self):
+        wd = self.app.wd
+        self.go_to_home_page()
+        contacts = []
+        for element in wd.find_elements_by_name("entry"):
+            id = element.find_element_by_name("selected[]").get_attribute("value")
+            lastname = element.find_element_by_xpath(".//td[2]").text
+            firstname = element.find_element_by_xpath(".//td[3]").text
+            contacts.append(Contact(firstname=firstname, lastname=lastname, id=id))
+        return contacts
+
+
