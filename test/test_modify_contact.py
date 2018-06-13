@@ -1,4 +1,5 @@
 from model.contact import Contact
+from random import randrange
 
 def test_change_first_contact(app):
     if app.contact.count() == 0:
@@ -6,7 +7,7 @@ def test_change_first_contact(app):
     old_contacts = app.contact.get_contact_list()
     contact = Contact(firstname="Joseph", lastname="Stalin", address="New York", phone="82222222222", email="qwe@qwe.com")
     contact.id = old_contacts[0].id
-    app.contact.change_first_contact(contact)
+    app.contact.change_contact_by_index(contact)
     assert len(old_contacts) == app.contact.count()
     new_contacts = app.contact.get_contact_list()
     old_contacts[0] = contact
