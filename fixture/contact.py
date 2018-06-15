@@ -35,10 +35,10 @@ class ContactHelper:
     def change_first_contact(self):
         self.change_contact_by_index(0)
 
-    def change_contact_by_index(self, new_contact_data):
+    def change_contact_by_index(self, index, new_contact_data):
         wd = self.app.wd
         self.go_to_home_page()
-        self.open_edit_form()
+        self.open_edit_form_by_index(index)
         # fill contact form
         self.fill_contact_form(new_contact_data)
         # submit modification
@@ -46,9 +46,9 @@ class ContactHelper:
         self.return_to_home_page()
         self.contact_cache = None
 
-    def open_edit_form(self):
+    def open_edit_form_by_index(self, index):
         wd = self.app.wd
-        wd.find_element_by_xpath("//table[@id='maintable']/tbody/tr[2]/td[8]/a/img").click()
+        wd.find_elements_by_xpath("//table[@id='maintable']/tbody/tr/td[8]/a/img")[index].click()
 
     def delete_first_contact(self):
         self.delete_contact_by_index(0)
