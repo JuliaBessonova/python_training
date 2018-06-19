@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="69df2c6d-bab7-4d7e-8a03-ef4a9cc7d70d" name="Default" comment="Добавлена запись рекордера">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fixture/contact.py" beforeDir="false" afterPath="$PROJECT_DIR$/fixture/contact.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/test_data_on_home_page.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/test_data_on_home_page.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,7 +16,7 @@
       <file leaf-file-name="contact.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fixture/contact.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
+            <state relative-caret-position="183">
               <caret line="116" column="107" selection-start-line="116" selection-start-column="107" selection-end-line="116" selection-end-column="107" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
@@ -26,20 +25,26 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_emails.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/test_emails.py">
+      <file leaf-file-name="test_data_on_home_page.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test/test_data_on_home_page.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="110" lean-forward="true" selection-start-line="7" selection-end-line="9" selection-end-column="110" />
+            <state relative-caret-position="119">
+              <caret line="7" column="78" selection-start-line="7" selection-start-column="78" selection-end-line="7" selection-end-column="78" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_data_on_home_page.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/test/test_data_on_home_page.py">
+      <file leaf-file-name="test_modify_contact.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test/test_modify_contact.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="126" selection-start-line="22" selection-start-column="126" selection-end-line="22" selection-end-column="126" />
+            <state relative-caret-position="119">
+              <caret line="7" column="40" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="7" selection-end-column="40" />
+              <folding>
+                <element signature="e#0#33#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -49,24 +54,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
               <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="test_phones.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test/test_phones.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="23" column="126" lean-forward="true" selection-start-line="16" selection-end-line="23" selection-end-column="126" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="contact.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/model/contact.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="69" selection-start-line="6" selection-start-column="69" selection-end-line="6" selection-end-column="69" />
             </state>
           </provider>
         </entry>
@@ -289,9 +276,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="py_test_in_test_phones_py - 2018.06.18 at 00h 58m 54s.xml">
-      <configuration name="py.test in test_phones.py" configurationId="tests" />
-    </history-entry>
     <history-entry file="py_test_for_test_phones_test_phones_on_contact_view_page - 2018.06.18 at 01h 18m 00s.xml">
       <configuration name="py.test for test_phones.test_phones_on_contact_view_page" configurationId="tests" />
     </history-entry>
@@ -318,6 +302,9 @@
     </history-entry>
     <history-entry file="py_test_for_test_data_on_home_page_test_data_on_home_page - 2018.06.19 at 23h 22m 48s.xml">
       <configuration name="py.test for test_data_on_home_page.test_data_on_home_page" configurationId="tests" />
+    </history-entry>
+    <history-entry file="py_test_in_test_data_on_home_page_py - 2018.06.19 at 23h 27m 03s.xml">
+      <configuration name="py.test in test_data_on_home_page.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
@@ -578,13 +565,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test/test_modify_contact.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="33" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fixture/session.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="816">
@@ -629,8 +609,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fixture/contact.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
+        <state relative-caret-position="183">
           <caret line="116" column="107" selection-start-line="116" selection-start-column="107" selection-end-line="116" selection-end-column="107" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test/test_modify_contact.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="40" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="7" selection-end-column="40" />
           <folding>
             <element signature="e#0#33#0" expanded="true" />
           </folding>
@@ -639,8 +629,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test/test_data_on_home_page.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="126" selection-start-line="22" selection-start-column="126" selection-end-line="22" selection-end-column="126" />
+        <state relative-caret-position="119">
+          <caret line="7" column="78" selection-start-line="7" selection-start-column="78" selection-end-line="7" selection-end-column="78" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
