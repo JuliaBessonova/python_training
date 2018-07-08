@@ -71,7 +71,7 @@ class ContactHelper:
     def open_edit_form_by_id(self, id):
         wd = self.app.wd
         self.go_to_home_page()
-        wd.find_element_by_xpath("//table[@id='maintable']/tbody/tr/td[8]/a[@href='edit.php?id='%s'']/img" % id).click()
+        wd.find_element_by_xpath("//table[@id='maintable']/tbody/tr/td[8]/a[@href='edit.php?id=%s']/img" % id).click()
 
     def view_contact_by_index(self, index):
         wd = self.app.wd
