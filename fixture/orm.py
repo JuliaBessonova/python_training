@@ -2,7 +2,7 @@ from pony.orm import *
 from datetime import datetime
 from model.group import Group
 from model.contact import Contact
-from pymysql.converters import decoders
+from pymysql.converters import encoders, decoders, convert_mysql_timestamp
 
 class ORMFixture:
 
@@ -14,18 +14,29 @@ class ORMFixture:
         name = Optional(str, column='group_name')
         header = Optional(str, column='group_header')
         footer = Optional(str, column='group_footer')
-        contacts = Set(lambda: ORMFixture.ORMContact, table="address_in_groups", column="id", reverse="contacts", lazy=True)
+        contacts = Set(lambda: ORMFixture.ORMContact, table="address_in_groups", column="id", reverse="groups", lazy=True)
 
     class ORMContact(db.Entity):
         _table_ = 'addressbook'
         id = PrimaryKey(int, column='id')
         firstname = Optional(str, column='firstname')
         lastname = Optional(str, column='lastname')
-        deprecated = Optional(datetime, column='deprecated')
-        groups = Set(lambda: ORMFixture.ORMGroup, table="address_in_groups", column="group_id", reverse="groups", lazy=True)
+        address = Optional(str, column='address')
+        homephone = Optional(str, column='home')
+        mobilephone = Optional(str, column='mobile')
+        workphone = Optional(str, column='work')
+        secondaryphone = Optional(str, column='phone2')
+        email = Optional(str, column='email')
+        email2 = Optional(str, column='email2')
+        email3 = Optional(str, column='email3')
+        deprecated = Optional(str, column='deprecated')
+        groups = Set(lambda: ORMFixture.ORMGroup, table="address_in_groups", column="group_id", reverse="contacts", lazy=True)
 
     def __init__(self, host, name, user, password):
-        self.db.bind('mysql', host=host, database=name, user=user, password=password, conv=decoders)
+        conv = encoders
+        conv.update(decoders)
+        conv[datetime] = convert_mysql_timestamp
+        self.db.bind('mysql', host=host, database=name, user=user, password=password, conv=conv)
         self.db.generate_mapping()
 
     def convert_groups_to_model(self, groups):
