@@ -190,6 +190,18 @@ class ContactHelper:
         wd = self.app.wd
         wd.find_element_by_xpath("//select[@name='to_group']/option[@value='%s']" % id).click()
 
+    def remove_contact_from_group_by_id(self, group_id, contact_id):
+        wd = self.app.wd
+        self.go_to_home_page()
+        self.select_group_by_id(group_id)
+        self.select_contact_by_id(contact_id)
+        wd.find_element_by_name("remove").click()
+        self.go_to_home_page()
+
+    def select_group_by_id(self, id):
+        wd = self.app.wd
+        wd.find_element_by_xpath("//select[@name='group']/option[@value='%s']" % id).click()
+
 
 
 
